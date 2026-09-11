@@ -1,6 +1,6 @@
 # Doan · Photographs
 
-A scroll journey through twelve photographs by Linh. An experiment from
+A scroll journey through photographs by Linh. An experiment from  
 [Doan Labs](https://doan-labs.com).
 
 The mark is the layout. A stack of photographs opens into the mark's own
