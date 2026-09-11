@@ -24,6 +24,23 @@ bun run build     # tsc -b, then vite build into dist/
 bun run lint      # oxlint
 ```
 
+## Deploy
+
+Cloudflare Workers serves `dist/` as static assets, no Worker script. The site
+answers at `kept.doan-labs.com`. The script is still called `photo-scroll`,
+which is the name the Cloudflare dashboard knows it by.
+
+Cloudflare Workers Builds watches the repository and deploys on its own, so a
+merge into `main` is the whole release. `.github/workflows/checks.yml` runs the
+three checks on every pull request, which is what keeps a broken build off
+`main` in the first place.
+
+To ship from your own machine instead:
+
+```sh
+bun run deploy    # bun run build, then wrangler deploy
+```
+
 ## Stack
 
 Vite 8, React 19, TypeScript, StyleX, `motion`, Lenis, oxlint, bun.

@@ -1,7 +1,15 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
+  // The script keeps the name the Cloudflare dashboard knows it by, so Workers
+  // Builds keeps deploying to the same service. The site is named by its
+  // domain, which is the only name anyone sees.
   "name": "photo-scroll",
   "compatibility_date": "2026-09-11",
-  "assets": { "directory": "./dist" },
-  "routes": [{ "pattern": "photo-scroll.doan-labs.com", "custom_domain": true }]
+  // Static assets only, no Worker script. The journey lives on one route, so
+  // any path that is not a file falls back to index.html rather than a 404.
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  },
+  "routes": [{ "pattern": "kept.doan-labs.com", "custom_domain": true }]
 }
