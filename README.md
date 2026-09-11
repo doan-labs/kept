@@ -40,6 +40,6 @@ Vite 8, React 19, TypeScript, StyleX, `motion`, Lenis, oxlint, bun.
 | `src/data.ts` | The twelve photographs, stack positions, lattice cells |
 | `src/tokens.stylex.ts` | Warm monochrome palette and type stack |
 
-Photographs are picsum placeholders until Linh's files land. See `src/data.ts`.
+Photographs live in `public/photos`, one jpeg per id. See `src/data.ts`.
 
 Conventions for working on this repo live in `AGENTS.md`.
