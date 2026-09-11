@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "photo-scroll",
+  "name": "kept",
   "compatibility_date": "2026-09-11",
   "assets": { "directory": "./dist" },
-  "routes": [{ "pattern": "photo-scroll.doan-labs.com", "custom_domain": true }]
+  "routes": [{ "pattern": "kept.doan-labs.com", "custom_domain": true }]
 }
