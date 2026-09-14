@@ -137,7 +137,7 @@ function Statement({ scrollY }: { scrollY: MotionValue<number> }) {
           </motion.span>
         </h2>
         <motion.p {...stylex.props(styles.kicker, styles.statementKick)} style={{ opacity: kick }}>
-          {num(statement)} · {statement.id}
+          {num(statement)}
         </motion.p>
         <div {...stylex.props(styles.statementImg)}>
           <GridReveal src={statement.src} p={p} />
@@ -195,7 +195,6 @@ function Row() {
             </motion.div>
             <figcaption {...stylex.props(styles.caption)}>
               <span>{num(item)}</span>
-              <span {...stylex.props(styles.faint)}>{item.id}</span>
             </figcaption>
           </motion.figure>
         ))}
@@ -284,7 +283,6 @@ function Feature({ scrollY }: { scrollY: MotionValue<number> }) {
       <div {...stylex.props(styles.sticky)}>
         <motion.div {...stylex.props(styles.featureTitle)} style={{ opacity: title, y: titleY }}>
           <p {...stylex.props(styles.kicker, styles.center)}>{num(feature)}</p>
-          <h2 {...stylex.props(styles.heading, styles.center)}>{feature.id}</h2>
         </motion.div>
         <motion.img {...stylex.props(styles.feature)} style={{ scale, rotate }} src={feature.src} alt="" />
       </div>
@@ -327,7 +325,6 @@ function Sheet({ scrollY, rm }: { scrollY: MotionValue<number>; rm: boolean }) {
               <img {...stylex.props(styles.frameImg)} style={{ aspectRatio: item.ratio }} src={item.src} alt="" />
               <figcaption {...stylex.props(styles.caption)}>
                 <span>{num(item)}</span>
-                <span {...stylex.props(styles.faint)}>{item.id}</span>
               </figcaption>
             </figure>
           ))}
@@ -352,7 +349,7 @@ function Closing({ onClose, onTop }: { onClose: () => void; onTop: () => void })
           transition={{ duration: 2.2, ease }}
         />
         <p {...stylex.props(styles.kicker, styles.closingCap)}>
-          {num(closing)} · {closing.id}
+          {num(closing)}
         </p>
       </section>
       <footer {...stylex.props(styles.footer, styles.pad)}>
@@ -541,7 +538,6 @@ const styles = stylex.create({
     letterSpacing: '0.04em',
     textTransform: 'uppercase',
   },
-  faint: { color: dark.inkFaint },
 
   /* collage */
   collage: { height: '100vh' },

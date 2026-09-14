@@ -42,4 +42,7 @@ Vite 8, React 19, TypeScript, StyleX, `motion`, Lenis, oxlint, bun.
 
 Photographs live in `public/photos`, one jpeg per id. See `src/data.ts`.
 
+The code is MIT. The photographs are not, they stay copyright Linh Doan,
+all rights reserved. See `LICENSE`.
+
 Conventions for working on this repo live in `AGENTS.md`.
